@@ -1,0 +1,11 @@
+{
+	"name": "sapui5applicationtemplatefeature",
+	"title": "sapui5applicationtemplatefeature",
+	"version": "1.0.0",
+	"description": "SAPUI5 Application Template Feature",
+	"homepage": "",
+	"icon": "",
+	"bundledPlugins": {
+		"sapui5applicationtemplateplugin": "file:sapui5applicationtemplateplugin"
+	}
+}
