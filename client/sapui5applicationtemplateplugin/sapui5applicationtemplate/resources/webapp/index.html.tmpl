@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+{{#if isSAPUI5160Selected}}
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{else}}
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+{{/if}}
+		<title>{{projectName}}</title>
+		<script id="sap-ui-bootstrap"
+			src="{{sapUI5Url}}"
+			data-sap-ui-theme={{#if ui5Config.Theme}}"{{ui5Config.Theme}}"{{else}}"sap_bluecrystal"{{/if}}
+			data-sap-ui-resourceroots='{"{{basicSAPUI5ApplicationProject.parameters.namespace.value}}.{{projectName}}": "./"}'
+			data-sap-ui-compatVersion="edge"
+{{#if isSAPUI5160Selected}}
+			data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+			data-sap-ui-async="true"
+			data-sap-ui-frameOptions="trusted">
+		</script>
+{{else}}
+			data-sap-ui-preload="async"
+			data-sap-ui-libs="sap.m">
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "{{basicSAPUI5ApplicationProject.parameters.namespace.value}}.{{projectName}}"
+					})
+				}).placeAt("content");
+			});
+		</script>
+{{/if}}
+	</head>
+{{#if isSAPUI5160Selected}}
+	<body class="sapUiBody">
+		<div data-sap-ui-component data-name="{{basicSAPUI5ApplicationProject.parameters.namespace.value}}.{{projectName}}" data-id="container" data-settings='{"id" : "{{projectName}}"}'></div>
+{{else}}
+	<body class="sapUiBody" id="content">
+{{/if}}
+	</body>
+</html>
