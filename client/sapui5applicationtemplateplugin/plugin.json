@@ -1,0 +1,49 @@
+{
+    "name": "sapui5applicationtemplateplugin",
+    "description": "SAPUI5 Application Template Plugin",
+    "i18n": "sapui5applicationtemplateplugin/i18n/i18n",
+    "requires": {
+        "services": [
+            "template",
+            "templateCustomizationStep"
+        ]
+    },
+    "provides": {
+        "services": {},
+        "interfaces": {}
+    },
+    "configures": {
+        "services": {
+            "template:templates": [
+                {
+                    "id": "SAPUI5ApplicationTemplate.sapui5applicationtemplate",
+                    "template": "sapui5applicationtemplateplugin/sapui5applicationtemplate/sapui5applicationtemplate",
+                    "name": "{i18n>Config_template_sapui5applicationtemplate_name}",
+                    "description": "{i18n>Config_template_sapui5applicationtemplate_desc}",
+                    "path": "sapui5applicationtemplateplugin/sapui5applicationtemplate",
+                    "icon": "sap-icon://detail-view",
+                    "internalOnly": false,
+                    "category": "Common",
+                    "wizardSteps": [
+                        "templateCustomizationStep"
+                    ],
+                    "templateType": "project",
+                    "requiresNeoApp": true,
+                    "version": "1.0.0",
+                    "orderPriority": 1000,
+                    "requiredTemplates": [
+                        {
+                            "id": "ui5template.basicSAPUI5ApplicationProjectCommon",
+                            "version": "1.32.0"
+                        }
+                    ],
+                    "modelRoot": "basicSAPUI5ApplicationProject",
+                    "modelFileName": "model.json",
+                    "fileName": "resources.zip",
+                    "previewImage": "image/SAPUI5-preview.png"
+                }
+            ]
+        }
+    },
+    "subscribes": {}
+}
