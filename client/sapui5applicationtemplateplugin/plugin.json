@@ -5,7 +5,11 @@
     "requires": {
         "services": [
             "template",
-            "templateCustomizationStep"
+            "templateCustomizationStep",
+            "filesystem.documentProvider",
+            "projectType",
+            "setting.project",
+            "basicSAPUI5ApplicationProjectTemplateService"
         ]
     },
     "provides": {
