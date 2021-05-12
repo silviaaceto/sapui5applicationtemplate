@@ -1,3 +1,22 @@
 {
-	
+	"welcomeFile": "/webapp/index.html",
+	"authenticationMethod": "none",
+	"routes": [{
+		"path": "/resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"version": "1.60.13",
+			"entryPath": "/resources"
+		},
+		"description": "SAPUI5 Resources"
+	}, {
+		"path": "/test-resources",
+		"target": {
+			"type": "service",
+			"name": "sapui5",
+			"entryPath": "/test-resources"
+		},
+		"description": "SAPUI5 Test Resources"
+	}]
 }
