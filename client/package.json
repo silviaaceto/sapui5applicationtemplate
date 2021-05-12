@@ -1,0 +1,23 @@
+{
+	"name": "sapui5applicationtemplatefeature",
+	"title": "sapui5applicationtemplatefeature",
+	"version": "1.0.0",
+	"description": "SAPUI5 Application Template Feature",
+	"homepage": "",
+	"icon": "",
+	"private": "true",
+	"scripts": {
+		"build": "ui5 build --clean-dest --include-task=generateManifestBundle generateCachebusterInfo"
+	},
+	"bundledPlugins": {
+		"sapui5applicationtemplateplugin": "file:sapui5applicationtemplateplugin"
+	},
+	"devDependencies": {
+		"@sap/ui5-builder-webide-extension": "1.0.2"
+	},
+	"ui5": {
+		"dependencies": [
+			"@sap/ui5-builder-webide-extension"
+		]
+	}
+}
